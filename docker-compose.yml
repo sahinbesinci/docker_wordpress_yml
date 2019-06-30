@@ -10,10 +10,9 @@ services:
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpressdbuser
-       WORDPRESS_DB_PASSWORD: wordpressdbpassword
-       WORDPRESS_DB_NAME: wordpressdbname
-	   
+       WORDPRESS_DB_USER: mysqluser
+       WORDPRESS_DB_PASSWORD: mysqlpassword
+       WORDPRESS_DB_NAME: mysqldatabase
    db:
      image: mysql:5.7
      volumes:
@@ -24,6 +23,5 @@ services:
        MYSQL_DATABASE: mysqldatabase
        MYSQL_USER: mysqluser
        MYSQL_PASSWORD: mysqlpassword
-
 volumes:
     db_data: {}
